@@ -1,0 +1,280 @@
+/* start of variables*/
+:root{
+  --main-background :#eee ;
+  --section-padding:40px ;
+  --card-color:#888;
+  --darkblue-color:darkblue;
+}
+/* end of variables*/
+ 
+img{
+  width: 300px;
+  height: 300px;
+}
+.section-content{
+
+ 
+  margin-left: 30px;
+ background-color: var(--main-background);
+ margin-bottom: 20px;
+ border: 2px solid black;
+ border-radius: 20px;
+ padding: 20px;
+}
+hr{
+  width: 50%;
+}
+i{
+  white-space: 5px;
+  padding: 5px;
+ 
+  color:darkblue;
+  border-radius: 10px;
+
+}
+.special-heading {
+  color: #ebeced;
+  font-size: 100px;
+  text-align: center;
+ 
+  font-weight: 800;
+  letter-spacing: -3px;
+  margin: 0;
+}
+.special-heading + p {
+  margin: -30px 0 0 ;
+  font-size: 20px;
+  text-align: center;
+  color: #797979;
+}
+@media (max-width: 767px) {
+  .special-heading {
+    font-size: 45px;
+  }
+  .special-heading + p {
+    margin-top: -20px;
+    font-size: 15px;
+  }
+ 
+
+}
+/* End Components */
+
+/* the start of global codes*/
+html{
+  scroll-behavior: smooth;
+
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+ 
+  }
+  body{
+   
+    font-family: "Work Sans", sans-serif;
+  }
+  .container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;  
+   
+}
+.content{
+  padding-top: 30px;
+  padding: var(--section-padding);
+  font-size: fit-content;
+
+}
+/* Small */
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+
+   
+  }
+  /* Medium */
+  @media (mngin-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+      width: 1170px;
+    }
+  }
+/* the end of global codes*/
+
+/* the start of header part*/
+.header{
+position:absolute;
+top: 0px;
+left: 0px;
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+height:30%;
+margin-top: 10px;
+margin-bottom: 10px;
+background-color: rgba(71, 70, 70, 0.507);
+z-index: 1111;
+}
+.header .nav-bar ul {
+ position: relative;
+ display: flex;
+ justify-content: flex-end;
+ align-items: center;
+}
+.header .nav-bar ul li {
+  list-style: none;
+  position: relative;
+}
+.header .nav-bar ul li a {
+  position: relative;
+  margin: 0px 15px;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: 500px;
+  justify-content: flex-end;
+}
+.header .container .logo{
+  position: relative;
+    width: 50px;
+    height: 50px;
+    align-items: center;
+}
+.header .container .nav-bar i{
+  position: relative;
+  display: inline;
+  justify-content: end;
+
+}
+.header .container  i {
+  margin-top: 30px;
+}
+/* the end of header part*/
+
+/* the start of landing part*/
+.landing{
+  position: relative;
+  padding: var(--section-padding);
+  margin-top: 10px;
+  height: 100vh;
+  width: 100%;
+ background-size: cover;
+ background-image: url(../imges/hand-using-gadgets-laptop-top-view-blank-screen.jpg);
+
+}
+.landing .welcome-quote {
+  display: inline;
+  font-size: 30px;
+  font-weight: 500;
+  color: darkblue;
+  letter-spacing: -3px;
+  word-spacing: 3px;
+  line-height: 20px;
+  font-variant:small-caps;
+}
+.landing h1{
+  font-size: 60px;
+  font-weight: 500;
+  text-align: center;
+  display: flexbox;
+ color:var(--darkblue-color);
+  margin: auto;
+  width: fit-content;
+  padding: 10px;
+  border-radius: 15px;
+}
+.landing p{
+  text-align: center;
+}
+/* the end of landing part*/
+
+/* the start of why-choose-us part*/
+.why-choose-us{ 
+  padding-top:var(--section-padding);
+  margin-top: 10px;
+  
+ 
+}
+.why-choose-us .content h4{
+  font-weight: 700;
+    margin-bottom: 10px;
+    display: block;
+    justify-content: center;
+
+}
+.why-choose-us .content {
+  display:grid;
+
+}
+@media (min-width :768px){
+  .why-choose-us .content{
+    grid-template-columns: repeat(auto-fit ,minmax(400px ,1fr));
+  }
+}
+/* the end of why-choose-us part*/
+
+/* the start of services part*/
+.service{
+  padding: var(--section-padding);
+}
+.service .content{
+background-color: #797979;
+  display:grid;
+  grid-template-columns: repeat(auto-fit ,minmax( 300px , 1fr) );
+}
+.service .content .card{
+  background-color: aqua;
+}
+/* the end of services part*/
+
+/* the start of portfolio part*/
+.potrfolio{
+  padding: var(--section-padding);
+
+}
+.potrfolio .content{
+  display: grid;
+  grid-template-rows: repeat(3 , minmax(200px , 1fr));
+}
+ .potrfolio .section-content .h4{
+padding-top: 10px;
+
+}
+/* the end of portfolio part*/
+
+
+/* the start of about part*/
+
+/* the end of about part*/
+
+/* the start of footer part*/
+.footer{
+  background-color: #797979;
+  padding: 20px;
+}
+.footer h3{
+  text-align: center;
+}
+.footer i{
+  margin: 20px;
+  padding: 20px;
+  display: grid;
+}
+.footer h4{
+  font-size: 60px;
+}
+
+/* the end of footer part*/
+
+

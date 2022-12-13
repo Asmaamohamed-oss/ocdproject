@@ -1,100 +1,80 @@
-/* start of variables*/
+*{
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
 :root{
-  --main-background :   rgb(161, 161, 153) ;
-  --section-padding:40px ;
+  --main-background:rgb(161, 161, 153) ;
+  --section-padding:60px ;
   --card-color:#888;
   --darkblue-color:darkblue;
 }
-/* end of variables*/
- 
+
+
 img{
   width: 100%;
 }
-.section-content{
-  margin-left: 30px;
- background-color: var(--main-background);
- margin-bottom: 20px;
- border: px solid black;
- border-radius: 20px;
- padding: 20px;
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
 }
 
-i{
-  white-space: 5px;
-  padding: 5px;
- 
-  color:darkblue;
-  border-radius: 10px;
 
+/*Special Heading Component*/
+.special-heading{
+  /* background-color: violet; */
+  text-align: center;
 }
-.special-heading {
+.special-heading h2 {
   color: #ffeb00;
-  font-size: 100px;
-  text-align: center;
-  font-weight: 100;
+  font-size: 50px;
   letter-spacing: -3px;
-  margin: 0;
+  text-transform: capitalize;
 }
-.special-heading + p {
-  margin: -30px 0 0;
+@media (min-width:768px) {
+  .special-heading h2 {
+    font-size: 100px;
+  }
+}
+.special-heading  p {
+  margin: -20px 0 0;
   font-size: 20px;
-  text-align: center;
   color: #ffffff73;
+  text-transform: capitalize;
 }
-@media (max-width: 767px) {
-  .special-heading {
-    font-size: 45px;
+@media (min-width: 768px) {
+  .special-heading p {
+    margin: -30px 0 0;
   }
-  .special-heading + p {
-    margin-top: -20px;
-    font-size: 15px;
-  }
- 
-
 }
 /* End Components */
 
 /* the start of global codes*/
 html{
   scroll-behavior: smooth;
-background-color:rgba(0, 0, 0, 0.836);
-
+  background-color:rgba(0, 0, 0, 0.836);
 }
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    color: rgb(255, 255, 255);
-  }
-  body{
-   background-image: url(../imges/front-view-fireless-candles-black.jpg);
-   background-size: 100%;
-   background-attachment: fixed;
-   font-family: "Work Sans", sans-serif;
-  }
-  .container {
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;  
-  
-   
+body{
+  background-image: url(../imges/front-view-fireless-candles-black.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "Work Sans", sans-serif;
 }
-.content{
-  padding-top: 30px;
-  padding: var(--section-padding);
-  font-size: fit-content;
-
+.container {
+  padding: 15px 0;
+  margin:0 auto;  
 }
 /* Small */
 @media (min-width: 768px) {
     .container {
       width: 750px;
     }
-
-   
   }
   /* Medium */
   @media (mngin-width: 992px) {
@@ -112,42 +92,32 @@ background-color:rgba(0, 0, 0, 0.836);
 
 /* the start of header part*/
 .header{
-position:relative;
-top: 0px;
-left: 0px;
-width: 100%;
-display: flex;
-justify-content: space-between;
-align-items: center;
-height:20%;
-margin-top: 10px;
-margin-bottom: 10px;
-background-color: rgb(9 12 30);
-z-index: 1111;
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(9 12 30);
+  z-index: 1111;
+  /* height:20%; */
 }
 .header .nav-bar ul {
- position: relative;
- display: flex;
- justify-content: flex-end;
- align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
-.header .nav-bar ul li {
-  list-style: none;
-  position: relative;
-}
+
 .header .nav-bar ul li a {
-  position: relative;
   margin: 0px 15px;
-  text-decoration: none;
   letter-spacing: 2px;
   font-weight: 500px;
-  justify-content: flex-end;
   color: #ffeb00a6;
 }
-.header .container .logo img{
-  position: relative;
-    width: 50px;
-    height: 50px;
+.header .container img.logo{
+  width: 50px;
+  height: 50px;
     /* align-items: center; */
 }
 
@@ -161,8 +131,8 @@ z-index: 1111;
   margin-top: 10px;
   height: 100vh;
   width: 100%;
- background-size: cover;
- background-position: center;
+  background-size: cover;
+  background-position: center;
 background-image: url(../imges/306672229_128547136593361_4859113651305317630_n.jpg);
 }
 .landing .welcome-quote {
@@ -211,54 +181,15 @@ background-image: url(../imges/306672229_128547136593361_4859113651305317630_n.j
   }
   /* .intermidiate .special-head + p{
 
-   margin: -30px 0 0 ;
-   font-size: 20px;
-   text-align: center;
-   color: #070606;
+    margin: -30px 0 0 ;
+    font-size: 20px;
+    text-align: center;
+    color: #070606;
   } */
 
 
-/* the start of why-choose-us part*/
-.why-choose-us{ 
-  padding-top:var(--section-padding);
-  margin-top: 10px;
-  border-radius: 30px;
-  margin-top: 130px;
-}
-.why-choose-us .content h4{
-  font-weight: 700;
-    margin-bottom: 10px;
-    display: block;
-    justify-content: center;
-    align-content: center;
-    font-weight: 600;
 
-}
-.why-choose-us .content {
 
-display: grid;
-grid-template-columns: repeat(auto-fit , minmax(200px ,1fr));
-}
-.why-choose-us .content .card {
-  flex:    1 1 250px;
-  line-height: 20px;
-  /* width: 100%; */
- 
- transition-duration: 0.5s;
- transition-delay: 5ms;
- transition-property: margin-top;
- transition-timing-function: ease-in-out;
-}
-.why-choose-us .content .card:hover{
-margin-top: 25px;
-
-}
-/* @media (min-width :769px){
-  .why-choose-us .content{
-    grid-template-rows: repeat(4 ,minmax(200px ,1fr));
-  }
-} */
-/* the end of why-choose-us part*/
 
 /* the start of services part*/
 .services{
@@ -285,7 +216,6 @@ margin-top: 25px;
   line-height: 20px;
 }
 #one{
-
   background-size: cover;
   background-image: url(../imges/5128557.jpg );
 }
@@ -336,31 +266,24 @@ margin-top: 25px;
 
 /* the start of about part*/
 .about {
-margin-top: 30px;
+padding: var(--section-padding) 0;
+background-color: rgb(21, 8, 51);
 }
 
-.about .parent{
+.about .about_content{
   display: grid;
-place-items: center;
-
+  place-items: center;
+  background-color: seagreen;
+}
+.about .about_content .about_image{
+  width: 250px;
+  height: 375px;
 }
 
-
-.about .text{
-  width: 50%;
-  font-size: 18px;
-  height: 100%;
-  align-content: flex-start;
-  justify-content: center;
-  align-content: center;
-  margin-bottom: 20px;
-}
 @media ( min-width:768px) {
-  .about .parent{
+  .about .about_content{
     grid-template-columns: repeat(2, 1fr);
-    place-items: center;
   }
-  
 }
 
 /* the end of about part*/

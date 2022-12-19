@@ -4,7 +4,7 @@
 const header = document.querySelector("header.header")
 
 window.addEventListener("scroll",(e)=>{
-    if(window.pageYOffset > 0){
+    if(window.pageYOffset > 2){
         header.classList.add("fixed")
     }else{
         header.classList.remove("fixed")

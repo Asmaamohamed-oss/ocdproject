@@ -38,7 +38,7 @@ html{
 }
 body{
   /* background-image: url(../imges/front-view-fireless-candles-black.jpg); */
-  background-image: url(/imges/front-view-fireless-candles-black.jpg),
+  background-image: url(../imges/front-view-fireless-candles-black.jpg),
   linear-gradient(-45deg,darkblue,var(--active--color));
   background-blend-mode: multiply;
   background-size: cover;
@@ -384,35 +384,35 @@ div.btn-nav:hover{
 }
 /*.web/.design/.photography/.voiceover/videograpghy/printing/marketing/moderation*/
 .portfolio-card.marketing .portfolio-card-img{
-  background-image: url(/imges/marketing.png) , 
+  background-image: url(../imges/marketing.png) , 
   linear-gradient(rgb(1 1 18 / 50%), rgb(250 246 41 / 38%), rgb(26 26 26 / 50%));
 }
 .portfolio-card.design .portfolio-card-img{
-  background-image: url(/imges/design.png) , 
+  background-image: url(../imges/design.png) , 
   linear-gradient(rgb(1 1 18 / 50%), rgb(250 246 41 / 38%), rgb(26 26 26 / 50%));
 }
 .portfolio-card.voiceover .portfolio-card-img{
-  background-image: url(/imges/voiceover.png) , 
+  background-image: url(../imges/voiceover.png) , 
   linear-gradient(rgb(1 1 18 / 50%), rgb(250 246 41 / 38%), rgb(26 26 26 / 50%));
 }
 .portfolio-card.photography .portfolio-card-img{
-  background-image: url(/imges/photography.jpg) , 
+  background-image: url(../imges/photography.jpg) , 
   linear-gradient(rgb(1 1 18 / 50%), rgb(250 246 41 / 38%), rgb(26 26 26 / 50%));
 }
 .portfolio-card.videography .portfolio-card-img{
-  background-image: url(/imges/videography.png) , 
+  background-image: url(../imges/videography.png) , 
   linear-gradient(rgb(1 1 18 / 50%), rgb(250 246 41 / 38%), rgb(26 26 26 / 50%));
 }
 .portfolio-card.printing .portfolio-card-img{
-  background-image: url(/imges/printing.png) , 
+  background-image: url(../imges/printing.png) , 
   linear-gradient(rgb(1 1 18 / 50%), rgb(250 246 41 / 38%), rgb(26 26 26 / 50%));
 }
 .portfolio-card.moderation .portfolio-card-img{
-  background-image: url(/imges/moderation.jpg) , 
+  background-image: url(../imges/moderation.jpg) , 
   linear-gradient(rgb(1 1 18 / 50%), rgb(250 246 41 / 38%), rgb(26 26 26 / 50%));
 }
 .portfolio-card.web .portfolio-card-img{
-  background-image: url(/imges/web.jpg) , 
+  background-image: url(../imges/web.jpg) , 
   linear-gradient(rgb(1 1 18 / 50%), rgb(250 246 41 / 38%), rgb(26 26 26 / 50%));
 }
 .portfolio-card-img .card-img-overlay{

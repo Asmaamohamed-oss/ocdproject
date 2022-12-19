@@ -5,21 +5,23 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="discribtion" content="this is (ocd) digital markting agency ">
-        <title>OCD</title>         <!--css files-->
+        <title>OCD</title>         
+        <!--css files-->
         <link rel="stylesheet" href="css files/main.css">
         <!--font icons from font awesome-->   
         <link rel="stylesheet" href="css files/all.min.css">
+        <!-- icon -->
+        <link rel="icon" type="image/png" href="./imges/logo.png">
         <!-- normalize file-->
         <link rel="stylesheet" href="css files/normalize.css">
         <!--google fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Work+Sans:wght@100;400;500;700;900&display=swap" rel="stylesheet">
-        <link rel="icon" href="imges/logo.png" type="image/png">
     </head>
     <body>
         <!--Header Start-->
-        <header class="header">
+        <header class="header fixed">
             <div class="container">
                 <a href="" class="logo-link">
                     <img src="imges/logo.png" alt="logo">
@@ -29,39 +31,48 @@
                     </div>
                 </a>
                 <nav class="nav-bar">
-                    <ul class="normal-links">
-                        <li>
-                            <a href="#home" class="active">home</a>
-                        </li>
-                        <li>
-                            <a href="#services">services</a>
-                        </li>
-                        <li>
-                            <a href="#portfolio">portfolio</a>
-                        </li>
-                        <li>
-                            <a href="#about">about</a>
-                        </li>
-                        <li>
-                            <a href="#contact">contact</a>
-                        </li>
-                        <button class="close-menu">X</button>
-                    </ul>
-                    <i class="far fa-moon moon-icon"></i>
-                    <!-- <i class="far fa-sun sun-icon"></i> -->
-                    <i class="fas fa-bars menu-icon"></i>
+                    <div class="links_container">
+                        <ul class="links_list">
+                            <li>
+                                <a href="#home" class="active">home</a>
+                            </li>
+                            <li>
+                                <a href="#about">about</a>
+                            </li>
+                            <li>
+                                <a href="#services">services</a>
+                            </li>
+                            <li>
+                                <a href="#portfolio">portfolio</a>
+                            </li>
+                            <!-- <li>
+                                <a href="#contact">contact</a>
+                            </li> -->
+                        </ul>
+                    </div>
                 </nav>
+                <div class="btn-nav show-menu">
+                    <button class="menu-btn ">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </div>
         </header>
     <!--Header End-->
 
         <!--Home Start-->
         <section class="home" id="home">
-            <!-- <div class="over-lay"> -->
             <div class="container">
             </div>
         </section>
         <!--Home End-->
+        <!--About Start-->
+        <section class="about" id="about">
+            <h2>About</h2>
+        </section>
+        <!--About End-->
         <!--Services Start-->
         <section class="services" id="services">
             <h2>Services</h2>
@@ -70,34 +81,142 @@
 
         <!--Portfolio Start-->
         <section class="portfolio" id="portfolio">
-            <h2>Poroflio</h2>
+            <div class="special-heading">
+                <h2>portfolio</h2>
+                <p>special heading</p>
+            </div>
+            <div class="container">
+                <div class="portfolio-container">
+                    <div class="portfolio-card">
+                        <div class="portfolio-card-img" data-img="marketing.png">
+                            <div class="card-img-overlay">
+                                <i class="fas fa-search-plus"></i>
+                                <i class="fas fa-link"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-card-footer">
+                            <p>Marketing</p>
+                            <a href="marketing.html" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-card">
+                        <div class="portfolio-card-img" data-img="design.png">
+                            <div class="card-img-overlay">
+                                <i class="fas fa-search-plus"></i>
+                                <i class="fas fa-link"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-card-footer">
+                            <p>design</p>
+                            <a href="design.html" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-card">
+                        <div class="portfolio-card-img" data-img="printing.png">
+                            <div class="card-img-overlay">
+                                <i class="fas fa-search-plus"></i>
+                                <i class="fas fa-link"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-card-footer">
+                            <p>printing</p>
+                            <a href="printing.html" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-card">
+                        <div class="portfolio-card-img" data-img="web.jpg">
+                            <div class="card-img-overlay">
+                                <i class="fas fa-search-plus"></i>
+                                <i class="fas fa-link"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-card-footer">
+                            <p>web development</p>
+                            <a href="web.html" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-card">
+                        <div class="portfolio-card-img" data-img="voiceover.png">
+                            <div class="card-img-overlay">
+                                <i class="fas fa-search-plus"></i>
+                                <i class="fas fa-link"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-card-footer">
+                            <p>voiceover</p>
+                            <a href="voiceover.html" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-card">
+                        <div class="portfolio-card-img" data-img="photography.jpg ">
+                            <div class="card-img-overlay">
+                                <i class="fas fa-search-plus"></i>
+                                <i class="fas fa-link"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-card-footer">
+                            <p>photography</p>
+                            <a href="photography.html" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-card">
+                        <div class="portfolio-card-img" data-img="moderation.jpg">
+                            <div class="card-img-overlay">
+                                <i class="fas fa-search-plus"></i>
+                                <i class="fas fa-link"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-card-footer">
+                            <p>moderation</p>
+                            <a href="moderation.html" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-card">
+                        <div class="portfolio-card-img"data-img="videography.png">
+                            <div class="card-img-overlay">
+                                <i class="fas fa-search-plus"></i>
+                                <i class="fas fa-link"></i>
+                            </div>
+                        </div>
+                        <div class="portfolio-card-footer">
+                            <p>videography</p>
+                            <a href="videography.html" target="_blank">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <!--Portfolio End-->
-
-        <!--About Start-->
-        <section class="about" id="about">
-            <h2>About</h2>
-        </section>
-        <!--About End-->
-
-        <!--Conatct Start-->
-        <section class="contact" id="contact">
-            <h2>Contact</h2>
-            <a href="https://www.facebook.com/OCD.Digital.Marketing/" target="_blank">
-                <i class="fa-brands fa-facebook"></i>
-            </a>
-            <a href="https://www.instagram.com/ocd_digital_marketing_agency/" target="_blank">
-                <i class="fa-brands fa-instagram"></i>
-            </a>
-            
-            <a href="https://api.whatsapp.com/send/?phone=%2B201277924269&text&type=phone_number&app_absent=0" target="_blank">
-                <i class="fa-brands fa-whatsapp"></i>
-            </a>
-            <a href="https://www.google.com/maps/place/42+%D8%B4%D8%A7%D8%B1%D8%B9+%D8%B9%D8%A8%D8%AF+%D8%A7%D9%84%D8%AE%D8%A7%D9%84%D9%82+%D8%AB%D8%B1%D9%88%D8%AA%D8%8C+%D8%A7%D9%84%D9%81%D9%88%D8%A7%D9%84%D8%A9%D8%8C+%D8%B9%D8%A7%D8%A8%D8%AF%D9%8A%D9%86%D8%8C+%D9%85%D8%AD%D8%A7%D9%81%D8%B8%D8%A9+%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9%E2%80%AC%E2%80%AD/data=!4m2!3m1!1s0x145840be1337567b:0x13961f7c63b3ca10?utm_source=mstt_1&entry=gps" target="_blank">
-                <i class="fa-sharp fa-solid fa-location-dot"></i>
-            </a>
-        </section>
-        <!--Conatct End-->
+        <!--Footer Start-->
+        <footer>
+            <div class="container">
+                <a href="" class="logo-link">
+                    <img src="imges/logo.png" alt="logo">
+                    <div class="ocd-logo">
+                        <p>ocd</p>
+                        <p>digital Marketing Agency</p>
+                    </div>
+                </a>
+                <div class="social">
+                    <p class="slogan">we only create difference</p>
+                    <a href="https://www.facebook.com/OCD.Digital.Marketing/" target="_blank">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ocd_digital_marketing_agency/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                        
+                    <a href="https://api.whatsapp.com/send/?phone=%2B201277924269&text&type=phone_number&app_absent=0" target="_blank">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="https://www.google.com/maps/place/42+%D8%B4%D8%A7%D8%B1%D8%B9+%D8%B9%D8%A8%D8%AF+%D8%A7%D9%84%D8%AE%D8%A7%D9%84%D9%82+%D8%AB%D8%B1%D9%88%D8%AA%D8%8C+%D8%A7%D9%84%D9%81%D9%88%D8%A7%D9%84%D8%A9%D8%8C+%D8%B9%D8%A7%D8%A8%D8%AF%D9%8A%D9%86%D8%8C+%D9%85%D8%AD%D8%A7%D9%81%D8%B8%D8%A9+%D8%A7%D9%84%D9%82%D8%A7%D9%87%D8%B1%D8%A9%E2%80%AC%E2%80%AD/data=!4m2!3m1!1s0x145840be1337567b:0x13961f7c63b3ca10?utm_source=mstt_1&entry=gps" target="_blank">
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                    </a>
+                </div>
+                <p>&copy; <span class="year"></span> <span class="ocd">OCD</span> all rights reserved</p>
+            </div>
+        </footer>
+        <!--Footer End-->
         <button class="to-top hide-btn"><i class="fa-solid fa-arrow-up"></i></button>
         <script src="app.js"></script>
     </body>

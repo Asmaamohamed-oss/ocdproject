@@ -95,8 +95,6 @@ window.addEventListener("click",(e)=>{
 const PorfolioImgs = document.querySelectorAll(".portfolio-card-img")
 PorfolioImgs.forEach(function(card){
     const img = card.dataset.img;
-    console.log(card);
-    console.log(img);
     card.style.backgroundImage=`url(/imges/${img}) , linear-gradient(rgb(1 1 18 / 50%), rgb(250 246 41 / 38%), rgb(26 26 26 / 50%))`
     // card.style.backgroundColor="black"
 })

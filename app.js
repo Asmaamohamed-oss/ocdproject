@@ -3,13 +3,16 @@
 
 const header = document.querySelector("header.header")
 
-window.addEventListener("scroll",(e)=>{
-    if(window.pageYOffset > 2){
+window.addEventListener("scroll",scrolled)
+
+function scrolled(e){
+    if(window.scrollY > 2){
         header.classList.add("fixed")
     }else{
         header.classList.remove("fixed")
     }
-})
+}
+scrolled()
 
 // Add Active link
 const links = document.querySelectorAll("nav ul li a")
@@ -99,12 +102,74 @@ window.addEventListener("click",(e)=>{
 //     // card.style.backgroundColor="black"
 // })
 
+/*Slider*/
+const arrayOfSrs = 
+["marketing.png","design.png","printing.png","web.jpg","voiceover.png","photography.jpg","moderation.jpg","videography.png"]
+const showSlider = document.querySelectorAll(".show-slider-icon")
+const slider = document.querySelector(".slider_overlay");
+const sliderDiv = document.querySelector(".slider_img");
+const sliderImg = document.querySelector(".slider_img img");
+const toRightIcon =  document.querySelector(".to_right_i");
+const toLeftIcon =  document.querySelector(".to_left_i");
+let currentIndex;
+
+showSlider.forEach(function(icon){
+    icon.addEventListener("click",function(e){
+        const currentImg = icon.parentElement.dataset.img;
+        // console.log(iconPatent);
+        slider.classList.add("show_slider_overlay")
+        slider.classList.remove("hide_slider_overlay")
+        
+        sliderImg.src=`imges/${currentImg}`
+        currentIndex = getCurrentIndex(currentImg);
+        /*Img Transition*/
+        sliderDiv.classList.remove("img_down")
+        sliderDiv.classList.add("img_up")
+    })
+})
+
+slider.addEventListener("click",(e)=>{
+    if(!e.target.classList.contains("to_right_i") && !e.target.classList.contains("to_left_i")){
+        slider.classList.add("hide_slider_overlay");
+        slider.classList.remove("show_slider_overlay");
+        /*Img Transition*/
+        sliderDiv.classList.remove("img_up")
+        sliderDiv.classList.add("img_down")
+
+    }
+})
+
+function getCurrentIndex(currentImg){
+    const currentIndex = arrayOfSrs.indexOf(currentImg)
+    return currentIndex
+}
+
+toRightIcon.addEventListener("click",(e)=>{
+    let newIndex = ++currentIndex;
+    if(newIndex > arrayOfSrs.length-1){
+        currentIndex = 0;
+        sliderImg.src=`imges/${arrayOfSrs[currentIndex]}`
+    }else{
+        sliderImg.src=`imges/${arrayOfSrs[newIndex]}`
+    }
+})
+
+toLeftIcon.addEventListener("click",(e)=>{
+    let newIndex = --currentIndex;
+    if(newIndex < 0){
+        currentIndex = arrayOfSrs.length-1;
+        sliderImg.src=`imges/${arrayOfSrs[currentIndex]}`
+    }else{
+        sliderImg.src=`imges/${arrayOfSrs[newIndex]}`
+    }
+})
+
 /*Year */
 const yearEle = document.querySelector(".year")
 const yearDate = new Date().getFullYear()
 yearEle.innerHTML = yearDate 
-/*to-top button*/
 
+/*to-top button*/
 const toTopBtn = document.querySelector("button.to-top")
 
 toTopBtn.addEventListener("click",(e)=>{

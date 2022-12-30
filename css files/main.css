@@ -123,8 +123,6 @@ button{
 /***********************Home Start****************************/
 .home{
   padding: var(--section-padding);
-  /* position: relative; */
-  /* margin-top: 10px; */
   min-height: 100vh;
   background-size: cover;
   background-position: center;

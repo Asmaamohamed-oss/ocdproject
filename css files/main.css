@@ -9,6 +9,7 @@
   font:inherit;
 }
 
+
 :root{
   --darkblue-color:darkblue;
   --active--color:#ffeb00;
@@ -34,9 +35,13 @@ ul{
 a{
   text-decoration: none;
 }
-html{
-  scroll-behavior: smooth;
+button{
+  outline: 0;
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
 }
+
 body{
   background-image: url(../imges/front-view-fireless-candles-black.jpg),
   linear-gradient(-45deg,darkblue,var(--active--color));
@@ -49,19 +54,6 @@ body{
 .container {
   padding:0 15px ;
   margin:0 auto;  
-}
-a{
-  text-decoration:none ;
-}
-ul{
-  list-style: none;
-}
-
-button{
-  outline: 0;
-  cursor: pointer;
-  border: 0;
-  background-color: transparent;
 }
 
 /*Special Heading Component*/
@@ -108,7 +100,7 @@ button{
     }
   }
   /* Medium */
-@media (mngin-width: 992px) {
+  @media (min-width: 992px) {
     .container {
       width: 970px;
     }
@@ -120,6 +112,7 @@ button{
     }
 }
 
+
 /***********************Home Start****************************/
 .home{
   padding: var(--section-padding);
@@ -128,7 +121,7 @@ button{
   background-position: center;
   background-image: url(../imges/306672229_128547136593361_4859113651305317630_n.jpg);
 }
-/***********************Home Start****************************/
+/***********************Home End****************************/
 
 
 /***********************Header Start****************************/
@@ -202,17 +195,33 @@ a.logo-link div.ocd-logo{
   width:82px;
   line-height: 30px;
 }
+.header .nav-bar ul li a {
+  align-items: center;
+  position: relative;
+  margin: 0px 15px;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: 500px;
+  justify-content: flex-end;
+  color: #ffeb00a6;
+}
+.header .nav-bar ul li a:is(:hover ,:focus , :active) 
+{
+  color: rgb(93, 192, 184);
+}
+.header .container .logo img{
+  position: relative;
+    width: 50px;
+    height: 100%;
+    /* align-items: center; */
+}
+
+
 a.logo-link div.ocd-logo p:nth-child(1){
   color: var(--active--color);
   letter-spacing: -3px;
   font-size: 35px;
 }
-@media (min-width:570px){
-  a.logo-link div.ocd-logo p:nth-child(1){
-    font-size: 40px;
-  }
-}
-
 a.logo-link div.ocd-logo p:nth-child(2){
   text-transform: capitalize;
   font-size: 10px;
@@ -355,6 +364,127 @@ div.btn-nav:hover{
 }
 /***********************Header End****************************/
 
+/***********************Why-choose-us Start************************/
+.why-choose-us{ 
+  padding-top:var(--section-padding);
+  margin-top: 10px;
+  border-radius: 30px;
+  margin-top: 130px;
+}
+
+.why-choose-us .content h4{
+  font-weight: 700;
+    margin-bottom: 10px;
+    display: block;
+    justify-content: center;
+    align-content: center;
+    font-weight: 600;
+
+}
+.why-choose-us .content {
+
+display: grid;
+grid-template-columns: repeat(auto-fit , minmax(200px ,300px));
+}
+.why-choose-us .content .card {
+ margin-left: 5px;
+ background-color: rgba(128, 128, 128, 0.301);
+  flex:    1 1 250px;
+  line-height: 20px;
+  /* width: 100%; */
+ 
+ transition-duration: 0.5s;
+ transition-delay: 5ms;
+ transition-property: margin-top;
+ transition-timing-function: ease-in-out;
+}
+.why-choose-us .content .card:hover{
+margin-top: 25px;
+background-color: #686e70;
+border-radius: 30px;
+
+}
+.About{
+  background-color: transparent;
+}
+.About .container h2{
+  text-align: center;
+}
+
+.About .about-content {
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+}
+.About .about-content P{
+  width: 600px;
+  line-height: 37px;
+  font-weight: 500;
+  font-size: 17px;
+  color: white;
+}
+.About .about-content P span{
+  color: #b5aa13;
+}
+.About img{
+  height: 450px;
+  width: fit-content;
+  border-radius: 20px;
+}
+@media (max-width: 766px) {
+  .About img {
+    display: none;
+  }
+ .About p {
+  text-align: center;
+ }
+  
+}
+.About .cheacked-items p{
+  color:white;
+}
+
+/*************************Why-choose-us End***********************/
+/*************************Services Start**************************/
+.services{
+  padding-top:var(--section-padding);
+  margin-top: 10px;
+  border-radius: 30px;
+  margin-top: 130px;
+}
+.services .content{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px ,1fr));
+}
+@media (max-width: 766px) {
+.services .content{
+  display: grid;
+  grid-template-columns: repeat(auto-fit , minmax(200px ,1fr));
+}
+}
+.services .content .card{
+  flex:    1 1 250px;
+  border-radius: 20px;
+  font-weight: 400;
+  padding: 20px;
+  background-color: #a1a199;
+  margin-bottom: 20px;
+  text-align: center;
+  width: fit-content;
+  transition-delay: 10ms;
+  transition-duration: 850ms;
+  transition-property: all;
+  line-height: 25px;
+  /* box-shadow: 0 0 5px rgb(221, 221, 221); */
+}
+
+.services .card h4{
+  text-align: center;
+  padding: 20px;
+}
+/*************************Services End**************************/
 /***********************Portfolio Start****************************/
 .portfolio-container{
   display: grid;
@@ -560,7 +690,9 @@ div.btn-nav:hover{
 /*Slider End*/
 
 /***********************Portfolio End****************************/
-/*********************** Footer End****************************/
+
+
+/*********************** Footer Start****************************/
 footer{
   padding: 40px 0;
   color: var(--white-color);
@@ -572,7 +704,12 @@ footer a.logo-link{
 footer .social{
   margin:40px auto;
   text-align: center;
+  color: white;
 }
+.footer span{
+  color: #ffeb00;
+}
+
 footer .social p.slogan{
   font-size: 24px;
   font-weight: 500;
@@ -582,7 +719,6 @@ footer .social p.slogan{
   border-bottom: 1px solid var(--white-color);
   width: fit-content;
 }
-
 footer .social a{
   color: var(--white-color);
   padding: 15px;
@@ -645,7 +781,7 @@ button.to-top.show-btn{
 }
 /**/
 section{
-  min-height: 100vh;
+  /* min-height: 100vh; */
   padding: var(--section-padding) 0;
 }
 section:not(#home){
